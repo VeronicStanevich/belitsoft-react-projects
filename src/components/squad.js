@@ -1,29 +1,35 @@
-import React, {useState} from "react";
-
-const fetchTeam = (id) => {
-    const headers = new Headers();
-    headers.append('X-Auth-Token', 'f113f557ce2a428e8a46dc9e659212f8');
-
-    return fetch(`https://api.football-data.org/v2/teams/${id}`, {
-        method: 'GET',
-        headers: headers
-    })
-        .then(res => res.json())
-}
+import React from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {loadPlayers} from "../store/actions/players";
 
 export const Squad = (props) => {
-    const [players, setPlayers] = useState([]);
+    const players = useSelector(state => state.selectedTeamPlayers);
+    const favoritePlayers = useSelector(({favoritePlayers}) => favoritePlayers);
+    const dispatch = useDispatch();
 
     React.useEffect(() => {
-        fetchTeam(props.team.id).then(team => {
-            setPlayers(team.squad)
-        });
+        dispatch(loadPlayers(props.team.id));
+
+        return () => dispatch({type: 'selected-team', value: []});
     }, []);
 
     return (
         players.map(player => (
-            <div key={player.id}>
+            <div key={player.id}
+                 className={`${favoritePlayers.find(({id}) => id === player.id) ? 'team__card_favorite' : ''}`}>
                 <p>{player.name}</p>
+                <button onClick={() => {
+                    dispatch({
+                        type: 'favorite-player/add', value: {
+                            id: player.id, player: player.name, teamId: props.team.id
+                        }
+                    });
+                }}>add player
+                </button>
+                <button onClick={() => {
+                    dispatch({type: 'favorite-player/remove', value: player.id});
+                }}>remove player
+                </button>
             </div>
         ))
     );

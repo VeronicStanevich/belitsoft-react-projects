@@ -29,6 +29,10 @@
     text-align: center;
 }
 
+.team__card_favorite {
+    background: red;
+}
+
 .team__link {
     display: flex;
     flex-direction: column;
