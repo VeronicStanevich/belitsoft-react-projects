@@ -3,13 +3,15 @@ import {useDispatch, useSelector} from "react-redux";
 import {Squad} from "../squad";
 import {User} from "../user/user";
 import {loadTeams} from "../../store/actions/teams";
+import {IState} from "../../store";
+import {ITeam} from "../../api/interfaces";
 
-export const Teams = () => {
-    const favoriteTeams = useSelector(state => state.favoriteTeams);
-    const teams = useSelector(state => state.teams);
+export const Teams: React.FunctionComponent = () => {
+    const favoriteTeams = useSelector<IState, ITeam[]>(state=> state.favoriteTeams);
+    const teams = useSelector<IState, ITeam[]>(state => state.teams);
     const dispatch = useDispatch();
     const [userPage, setUserPage] = useState(false);
-    const [selectedTeam, setSelectedTeam] = useState(null);
+    const [selectedTeam, setSelectedTeam] = useState<ITeam | null>(null);
 
     React.useEffect(() => {
         dispatch(loadTeams());
@@ -20,7 +22,8 @@ export const Teams = () => {
             <div>
                 <button onClick={() => setUserPage(false)}>Back</button>
                 <User/>
-            </div>);
+            </div>
+        );
     }
 
     if (selectedTeam) {
@@ -47,12 +50,12 @@ export const Teams = () => {
                          event.preventDefault();
                          setSelectedTeam(team);
                      }}>
-                    <button onClick={(event) => {
+                    <button className="team__add_to_favourite" onClick={(event) => {
                         event.stopPropagation();
                         dispatch({type: 'favorite/add', value: {id: team.id, name: team.name}})
                     }}>add to favorite
                     </button>
-                    <button onClick={(event) => {
+                    <button className="team__remove_from_favourite" onClick={(event) => {
                         event.stopPropagation();
                         dispatch({type: 'favorite/remove', value: team.id})
                     }}>remove from favorite
@@ -66,5 +69,3 @@ export const Teams = () => {
         </div>
     );
 };
-
-// export default connect()(Teams);

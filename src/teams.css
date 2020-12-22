@@ -40,3 +40,13 @@
     justify-content: space-between;
     height: 100%;
 }
+.team__buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.team__add_to_favourite, .team__remove_from_favourite{
+    background-color: whitesmoke;
+    border-radius: 15px;
+    border-color: gray;
+}

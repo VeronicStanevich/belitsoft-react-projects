@@ -2,7 +2,17 @@ import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {loadPlayers} from "../store/actions/players";
 
-export const Squad = (props) => {
+export interface IFavoritePlayer {
+    id: number;
+    player: string;
+    teamId: number;
+}
+
+interface IProps {
+
+}
+
+export const Squad: React.FunctionComponent<IProps> = (props) => {
     const players = useSelector(state => state.selectedTeamPlayers);
     const favoritePlayers = useSelector(({favoritePlayers}) => favoritePlayers);
     const dispatch = useDispatch();
@@ -10,7 +20,9 @@ export const Squad = (props) => {
     React.useEffect(() => {
         dispatch(loadPlayers(props.team.id));
 
-        return () => dispatch({type: 'selected-team', value: []});
+        return () => {
+            dispatch({type: 'selected-team', value: []})
+        };
     }, []);
 
     return (
