@@ -9,7 +9,7 @@ interface ISetActionType {
     value: IPlayer[]
 }
 
-export function selectedTeamReducer(players: IPlayer[] = [], action: ISetActionType) {
+export function selectedTeamPayersReducer(players: IPlayer[] = [], action: ISetActionType) {
     switch (action.type) {
         case ActionType.SET_SELECTED_TEAM:
             return action.value;

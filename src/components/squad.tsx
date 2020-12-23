@@ -1,20 +1,22 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
+import {useParams} from 'react-router-dom';
 import {loadPlayers} from "../store/actions/players";
 import {IState} from "../store";
-import {IFavoritePlayer, IPlayer, ITeam} from "../interfaces";
+import {IFavoritePlayer, IPlayer} from "../interfaces";
 
-interface IProps {
-    team: ITeam
+interface IRouterParams {
+    id: string;
 }
 
-export const Squad: React.FunctionComponent<IProps> = props => {
+export const Squad: React.FunctionComponent = props => {
+    let routerParams = useParams<IRouterParams>();
     const players = useSelector<IState, IPlayer[]>(state => state.selectedTeamPlayers);
     const favoritePlayers = useSelector<IState, IFavoritePlayer[]>(({favoritePlayers}) => favoritePlayers);
     const dispatch = useDispatch();
 
     React.useEffect(() => {
-        dispatch(loadPlayers(props.team.id));
+        dispatch(loadPlayers(Number(routerParams.id)));
 
         return () => {
             dispatch({type: 'selected-team', value: []})
@@ -30,7 +32,7 @@ export const Squad: React.FunctionComponent<IProps> = props => {
                     <button onClick={() => {
                         dispatch({
                             type: 'favorite-player/add', value: {
-                                id: player.id, player: player.name, teamId: props.team.id
+                                id: player.id, player: player.name, teamId: routerParams.id
                             }
                         });
                     }}>add player
