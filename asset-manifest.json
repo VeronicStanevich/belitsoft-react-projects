@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/belitsoft-react-projects/static/css/main.bbea4b8d.chunk.css",
-    "main.js": "/belitsoft-react-projects/static/js/main.ee4bea9b.chunk.js",
-    "main.js.map": "/belitsoft-react-projects/static/js/main.ee4bea9b.chunk.js.map",
+    "main.js": "/belitsoft-react-projects/static/js/main.30325501.chunk.js",
+    "main.js.map": "/belitsoft-react-projects/static/js/main.30325501.chunk.js.map",
     "runtime-main.js": "/belitsoft-react-projects/static/js/runtime-main.22538fed.js",
     "runtime-main.js.map": "/belitsoft-react-projects/static/js/runtime-main.22538fed.js.map",
     "static/js/2.34e755dc.chunk.js": "/belitsoft-react-projects/static/js/2.34e755dc.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.22538fed.js",
     "static/js/2.34e755dc.chunk.js",
     "static/css/main.bbea4b8d.chunk.css",
-    "static/js/main.ee4bea9b.chunk.js"
+    "static/js/main.30325501.chunk.js"
   ]
 }
