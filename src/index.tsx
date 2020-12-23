@@ -19,11 +19,11 @@ const App = () => {
         <Provider store={store}>
             <Router>
                 <nav>
-                    <ul>
-                        <li>
+                    <ul className="router-navigation-list">
+                        <li className="router-navigation-list__item">
                             <Link to="/">Teams</Link>
                         </li>
-                        <li>
+                        <li className="router-navigation-list__item">
                             <Link to="/user">User</Link>
                         </li>
                     </ul>

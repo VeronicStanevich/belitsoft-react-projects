@@ -53,3 +53,13 @@
     border-radius: 15px;
     border-color: gray;
 }
+
+.router-navigation-list {
+    list-style: none;
+    display: flex;
+    padding-left: 15px;
+}
+
+.router-navigation-list__item {
+    padding: 10px;
+}
