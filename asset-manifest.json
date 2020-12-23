@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/belitsoft-react-projects/static/css/main.173ce3f7.chunk.css",
-    "main.js": "/belitsoft-react-projects/static/js/main.c968e6ba.chunk.js",
-    "main.js.map": "/belitsoft-react-projects/static/js/main.c968e6ba.chunk.js.map",
+    "main.css": "/belitsoft-react-projects/static/css/main.78ae2b62.chunk.css",
+    "main.js": "/belitsoft-react-projects/static/js/main.e8ab0606.chunk.js",
+    "main.js.map": "/belitsoft-react-projects/static/js/main.e8ab0606.chunk.js.map",
     "runtime-main.js": "/belitsoft-react-projects/static/js/runtime-main.22538fed.js",
     "runtime-main.js.map": "/belitsoft-react-projects/static/js/runtime-main.22538fed.js.map",
-    "static/js/2.390fc02d.chunk.js": "/belitsoft-react-projects/static/js/2.390fc02d.chunk.js",
-    "static/js/2.390fc02d.chunk.js.map": "/belitsoft-react-projects/static/js/2.390fc02d.chunk.js.map",
+    "static/js/2.dbca8302.chunk.js": "/belitsoft-react-projects/static/js/2.dbca8302.chunk.js",
+    "static/js/2.dbca8302.chunk.js.map": "/belitsoft-react-projects/static/js/2.dbca8302.chunk.js.map",
     "index.html": "/belitsoft-react-projects/index.html",
-    "static/css/main.173ce3f7.chunk.css.map": "/belitsoft-react-projects/static/css/main.173ce3f7.chunk.css.map",
-    "static/js/2.390fc02d.chunk.js.LICENSE.txt": "/belitsoft-react-projects/static/js/2.390fc02d.chunk.js.LICENSE.txt"
+    "static/css/main.78ae2b62.chunk.css.map": "/belitsoft-react-projects/static/css/main.78ae2b62.chunk.css.map",
+    "static/js/2.dbca8302.chunk.js.LICENSE.txt": "/belitsoft-react-projects/static/js/2.dbca8302.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.22538fed.js",
-    "static/js/2.390fc02d.chunk.js",
-    "static/css/main.173ce3f7.chunk.css",
-    "static/js/main.c968e6ba.chunk.js"
+    "static/js/2.dbca8302.chunk.js",
+    "static/css/main.78ae2b62.chunk.css",
+    "static/js/main.e8ab0606.chunk.js"
   ]
 }
