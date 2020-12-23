@@ -1,8 +1,7 @@
 import {createStore} from 'redux'
 import {combinedReducer} from "./reducers";
 import {middlewareEnhancer} from "./middlewares";
-import {ITeam} from "../api/interfaces";
-import {IFavoritePlayer} from "../components/squad";
+import {IFavoritePlayer, IPlayer, ITeam} from "../interfaces";
 
 const preloadedState = JSON.parse(localStorage.getItem('store-state') || '') || {};
 
@@ -14,5 +13,5 @@ export interface IState {
     favoriteTeams: ITeam[],
     favoritePlayers: IFavoritePlayer[],
     teams: ITeam[],
-    selectedTeamPlayers: object[]
+    selectedTeamPlayers: IPlayer[]
 }

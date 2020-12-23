@@ -3,8 +3,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {Squad} from "../squad";
 import {User} from "../user/user";
 import {loadTeams} from "../../store/actions/teams";
+import {ITeam} from "../../interfaces";
 import {IState} from "../../store";
-import {ITeam} from "../../api/interfaces";
 
 export const Teams: React.FunctionComponent = () => {
     const favoriteTeams = useSelector<IState, ITeam[]>(state=> state.favoriteTeams);

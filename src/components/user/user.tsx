@@ -1,8 +1,7 @@
 import {useSelector} from "react-redux";
-import {ITeam} from "../../api/interfaces";
+import {IFavoritePlayer, ITeam} from "../../interfaces";
 import {IState} from "../../store";
 import {FunctionComponent} from "react";
-import {IFavoritePlayer} from "../squad";
 
 export const User: FunctionComponent = () => {
     const teams = useSelector<IState, ITeam[]>(state => state.favoriteTeams);
