@@ -17,7 +17,7 @@ import {Squad} from "./components/squad";
 const App = () => {
     return (
         <Provider store={store}>
-            <Router>
+            <Router basename="/belitsoft-react-projects">
                 <nav>
                     <ul className="router-navigation-list">
                         <li className="router-navigation-list__item">
