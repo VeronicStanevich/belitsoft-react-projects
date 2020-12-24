@@ -10,7 +10,7 @@ export const User: FunctionComponent = () => {
     return (
         <>
             {teams.map((team) => {
-                const players = favoritePlayers.filter(({teamId}) => teamId === team.id);
+                const players = favoritePlayers.filter(({teamId}) => +teamId === team.id);
 
                 return (
                     <div key={team.id}>
